@@ -1,3 +1,4 @@
+/*
 #include <SFML/Graphics.hpp>
 
 #include "app.hpp"
@@ -9,12 +10,12 @@ int main()
 	sf::RenderWindow window(sf::VideoMode(900, 700), "Q-Learning Application", sf::Style::Close);
 	window.setFramerateLimit(240);
 
-	sf::Font font;
-	if (!font.loadFromFile("../res/fonts/notalot35.ttf"))
-	{
-		printf("ERROR: Could not load font '../res/fonts/notalot35.ttf'. Exiting the app.");
-		return -9001;
-	}
+        sf::Font font;
+        if (!font.loadFromFile("D:\Downloads\q-learning-7-master-299a9e97f4150de1be48e17dac599419d10b128c\q-learning-7-master-299a9e97f4150de1be48e17dac599419d10b128c\res\fonts\notalot35.ttf"))
+        {
+                printf("ERROR: Could not load font '../res/fonts/notalot35.ttf'. Exiting the app.");
+                return -9001;
+        }
 
 	App app(font);
 
@@ -37,7 +38,7 @@ int main()
 				std::cout << "the left button was pressed" << std::endl;
 				std::cout << "mouse x: " << event.mouseButton.x << std::endl;
 				std::cout << "mouse y: " << event.mouseButton.y << std::endl;
-				*/
+
 				app.passClickEvent(sf::Vector2f(event.mouseButton.x,event.mouseButton.y));
 			    }
 			}
@@ -56,16 +57,17 @@ int main()
 				app.passMoveEvent(sf::Vector2f(event.mouseMove.x,event.mouseMove.y));
 			}
 
-		}
+                }
 
-		// Update objects
-		app.updateGame();
+                // Update objects
+                app.updateGame();
 
-		// Render the objects on the screen
-		window.clear();	
-		app.drawObjects(window);
-		window.display();
-	}
+                // Render the objects on the screen
+                window.clear();
+                app.drawObjects(window);
+                window.display();
+        }
 
-	return 0;
-}	
+        return 0;
+}
+*/

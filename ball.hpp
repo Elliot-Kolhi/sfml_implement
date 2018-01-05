@@ -2,6 +2,7 @@
 #define BALL_HPP
 
 #include <SFML/Graphics.hpp>
+#include "mycanvas.h"
 
 class Ball
 {
@@ -9,7 +10,7 @@ class Ball
 public:
 
 	Ball(sf::Vector2f max_boundry, float r, float gridsize, float length, sf::Vector2f position, sf::Vector2f velocity);
-	Ball();
+    Ball();
 
 	/*
 	This function moves the ball as per physics:
@@ -30,7 +31,7 @@ public:
 	input argument: window
 	the window that the drawing is happening on
 	*/
-	void draw(sf::RenderWindow& window);
+    void draw(MyCanvas *window);
 
 	//returns ball position
 	sf::Vector2f getPosition();

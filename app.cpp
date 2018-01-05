@@ -62,7 +62,7 @@ void App::updateGame()
 			{
 				player.printMatrix();
 			}
-			*/
+            */
 		}
 		
 		_ball.step(_agents[0].getPosition(), _agents[1].getPosition());
@@ -125,7 +125,7 @@ void App::drawObjects(sf::RenderWindow& window)
 
 	}
 	
-	_ball.draw(window);
+    //_ball.draw(window);
 	
 	
 	
@@ -154,7 +154,7 @@ void App::resetField()
 	Upon field reset,
 	1) Initialize the bat positions
 	2) Initialize the ball position and velocity
-	*/
+    */
 
 	for (auto& player : _agents) {
 		// TODO some reset function
@@ -172,7 +172,7 @@ void App::resetField()
 	2) Initialize the ball position and velocity
 	3) Initialize the bat QMatrix
 	4) Initialize policy
-	*/
+    */
 void App::resetApp()
 {
 	resetField();
@@ -181,3 +181,4 @@ void App::resetApp()
 		player.resetPolicy();
 	}
 }
+

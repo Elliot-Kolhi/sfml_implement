@@ -56,7 +56,7 @@ void Ball::step(sf::Vector2f paddle1_position, sf::Vector2f paddle2_position)
 	sf::Vector2f paddle_velocity(0.f, 0.f);
 
 	// Temp variable to help things...
-	float paddleWidth = _gridsize;
+    //float paddleWidth = _gridsize;
 
 	// Collision with the floor (note that y grows "down"!)
 	if ( (_position.y + _r) >= _max_boundry.y )
@@ -118,11 +118,11 @@ void Ball::step(sf::Vector2f paddle1_position, sf::Vector2f paddle2_position)
 
 }
 
-void Ball::draw(sf::RenderWindow& window)
+void Ball::draw(MyCanvas* window)
 {
 	sf::RectangleShape ball(sf::Vector2f(_r, _r));	
 	ball.setPosition(_position);
-	window.draw(ball);
+    window->draw(ball);
 }
 
 sf::Vector2f Ball::getPosition()

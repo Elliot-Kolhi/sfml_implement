@@ -24,7 +24,7 @@ SOURCES += \
     slider.cpp \
     ui.cpp \
     uielement.cpp \
-    main (2).cpp
+    old_main.cpp
 
 HEADERS  += \
     mainwindow.h \
