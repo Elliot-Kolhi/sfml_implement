@@ -15,12 +15,29 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     mycanvas.cpp \
-    qsfmlcanvas.cpp
+    qsfmlcanvas.cpp \
+    agent.cpp \
+    app.cpp \
+    ball.cpp \
+    button.cpp \
+    qlearning.cpp \
+    slider.cpp \
+    ui.cpp \
+    uielement.cpp \
+    main (2).cpp
 
 HEADERS  += \
     mainwindow.h \
     mycanvas.h \
-    qsfmlcanvas.h
+    qsfmlcanvas.h \
+    agent.hpp \
+    app.hpp \
+    ball.hpp \
+    button.hpp \
+    qlearning.hpp \
+    slider.hpp \
+    ui.hpp \
+    uielement.hpp
 
 FORMS    += \
     mainwindow.ui
