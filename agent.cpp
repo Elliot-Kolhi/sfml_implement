@@ -1,6 +1,9 @@
 #include "agent.hpp"
 #include "random"
 
+Agent::Agent()
+{
+}
 
 Agent::Agent(sf::Vector2f position, sf::Vector2f batSize, float gridSize, int worldHeight, int id)
 {
@@ -58,10 +61,10 @@ void Agent::resetPolicy()
 	_policy.initQMatrix();
 }
 
-void Agent::draw(sf::RenderWindow& window)
+void Agent::draw(QSFMLCanvas* window)
 {
 	_shape.setPosition(_position);
-	window.draw(_shape);
+    window->draw(_shape);
 
 
 /*
@@ -115,7 +118,7 @@ void Agent::draw(sf::RenderWindow& window)
 
 			tile.setFillColor(color);
 			tile.setPosition(tableOrigin + sf::Vector2f(i* tileSize.x, (ySize-j)* tileSize.y));
-			window.draw(tile);
+            window->draw(tile);
 		}
 	}
 

@@ -3,6 +3,7 @@
 
 #include <SFML/Graphics.hpp>
 #include "qlearning.hpp"
+#include "qsfmlcanvas.h"
 
 
 class Agent
@@ -10,13 +11,13 @@ class Agent
 
 public:
 	Agent(sf::Vector2f position, sf::Vector2f batSize, float gridSize, int worldHeight, int id);
-
+    Agent();
 	
 	/*
 	1) Draw the agent as rectangle
 	2) Draw the q-tables
 	*/
-	void draw(sf::RenderWindow& window);
+    void draw(QSFMLCanvas* window);
 
 	/*
 	This function "asks" the QLearning policy what is the next action

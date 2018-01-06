@@ -2,7 +2,7 @@
 #define BALL_HPP
 
 #include <SFML/Graphics.hpp>
-#include "mycanvas.h"
+#include "qsfmlcanvas.h"
 
 class Ball
 {
@@ -31,7 +31,7 @@ public:
 	input argument: window
 	the window that the drawing is happening on
 	*/
-    void draw(MyCanvas *window);
+    void draw(QSFMLCanvas* window);
 
 	//returns ball position
 	sf::Vector2f getPosition();

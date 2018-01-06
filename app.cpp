@@ -107,7 +107,7 @@ void App::updateGame()
 	_ui.setLearningRateText(_agents[0].getLearningRate());
 
 }
-
+/*
 void App::drawObjects(sf::RenderWindow& window)
 {
 
@@ -121,15 +121,15 @@ void App::drawObjects(sf::RenderWindow& window)
 
 	for (auto& player : _agents) {
 		
-		player.draw(window);
+        playerdraw(window);
 
 	}
 	
     //_ball.draw(window);
 	
 	
-	
 }
+*/
 
 void App::passClickEvent(sf::Vector2f mousePos)
 {

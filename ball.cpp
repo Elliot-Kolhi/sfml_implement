@@ -118,7 +118,7 @@ void Ball::step(sf::Vector2f paddle1_position, sf::Vector2f paddle2_position)
 
 }
 
-void Ball::draw(MyCanvas* window)
+void Ball::draw(QSFMLCanvas* window)
 {
 	sf::RectangleShape ball(sf::Vector2f(_r, _r));	
 	ball.setPosition(_position);

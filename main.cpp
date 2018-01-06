@@ -1,4 +1,3 @@
-#include "mycanvas.h"
 #include "mainwindow.h"
 #include "qsfmlcanvas.cpp"
 #include "mycanvas.cpp"
@@ -21,14 +20,14 @@ int main(int argc, char *argv[])
     MainFrame->show();
 
     // Create a SFML view inside the main frame
-    MyCanvas* SFMLView = new MyCanvas(MainFrame, QPoint(20, 20), QSize(600, 400));
+    MyCanvas* SFMLView = new MyCanvas(MainFrame, QPoint(20, 20), QSize(620, 400));
     SFMLView->show();
 
-    MyCanvas* SFMLView2 = new MyCanvas(MainFrame, QPoint(20, 500), QSize(100, 100));
-    SFMLView2->show();
+    //MyCanvas* SFMLView2 = new MyCanvas(MainFrame, QPoint(20, 500), QSize(100, 100));
+    //SFMLView2->show();
 
-    MyCanvas* SFMLView3 = new MyCanvas(MainFrame, QPoint(120, 500), QSize(100, 100));
-    SFMLView3->show();
+    //MyCanvas* SFMLView3 = new MyCanvas(MainFrame, QPoint(120, 500), QSize(100, 100));
+    //SFMLView3->show();
 
     //w.setCentralWidget(SFMLView);
     return App.exec();
