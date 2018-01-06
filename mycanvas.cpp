@@ -1,7 +1,7 @@
 #include "mycanvas.h"
 #include <unistd.h>
 
-MyCanvas::MyCanvas(QWidget *parent, const QPoint& position, const QSize& size) :
+MyCanvas::MyCanvas(MainWindow *parent, const QPoint& position, const QSize& size) :
 QSFMLCanvas(parent, position, size)
 {
 }
@@ -62,6 +62,9 @@ void MyCanvas::onUpdate()
   shape.setPosition(v1);
   this->draw(mSprite);
   draw(shape);
+  sf::RectangleShape background(sf::Vector2f(_xBallMax,_yBallMax));
+  background.setFillColor(sf::Color(60.f,60.f,60.f));
+  draw(background);
   if (_isPaused == false) {
       v1.x += 0.1f;
       _ball.step(_agents[0].getPosition(), _agents[1].getPosition());
@@ -108,5 +111,5 @@ void MyCanvas::onUpdate()
 
   }
 
-  //usleep(100000);
+  usleep(100000);
 }

@@ -4,6 +4,7 @@
 #include "qsfmlcanvas.h"
 #include "ball.hpp"
 #include "agent.hpp"
+#include "mainwindow.h"
 
 class MyCanvas : public QSFMLCanvas
 {
@@ -46,7 +47,7 @@ class MyCanvas : public QSFMLCanvas
   int           _stepNumber;
 
   public:
-  explicit MyCanvas(QWidget *parent, const QPoint& position, const QSize& size);
+  explicit MyCanvas(MainWindow *parent, const QPoint& position, const QSize& size);
 
   signals:
 
