@@ -111,5 +111,5 @@ void MyCanvas::onUpdate()
 
   }
 
-  usleep(100000);
+  //usleep(100000);
 }

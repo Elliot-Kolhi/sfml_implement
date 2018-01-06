@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
     //MyCanvas* SFMLView = new MyCanvas(MainFrame, QPoint(20, 20), QSize(620, 400));
     //SFMLView->show();
 
-    MyCanvas* SFMLView2 = new MyCanvas(w , QPoint(20, 20), QSize(620, 400));
+    MyCanvas* SFMLView2 = new MyCanvas(w , QPoint(10, 20), QSize(620, 630));
     SFMLView2->show();
 
     //MyCanvas* SFMLView3 = new MyCanvas(MainFrame, QPoint(120, 500), QSize(100, 100));

@@ -49,3 +49,5 @@ LIBS += -LD:\Downloads\SFML-2.0-sources\SFML_test\LIBS\
 
 CONFIG(debug, debug|release): LIBS += -lsfml-audio-d -lsfml-graphics-d -lsfml-main-d -lsfml-network-d -lsfml-system-d -lsfml-window-d
 CONFIG(release, debug|release): LIBS += -lsfml-audio -lsfml-graphics -lsfml-main -lsfml-network -lsfml-system -lsfml-window
+
+DISTFILES +=

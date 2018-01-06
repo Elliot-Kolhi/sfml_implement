@@ -7,25 +7,152 @@
     <x>0</x>
     <y>0</y>
     <width>900</width>
-    <height>700</height>
+    <height>660</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
-      <x>780</x>
-      <y>30</y>
-      <width>75</width>
-      <height>23</height>
+      <x>650</x>
+      <y>10</y>
+      <width>241</width>
+      <height>241</height>
      </rect>
     </property>
-    <property name="text">
-     <string>PushButton</string>
+    <property name="title">
+     <string>Options</string>
     </property>
+    <widget class="QPushButton" name="pushButton_3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>101</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Pause</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_5">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>20</y>
+       <width>101</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Reset</string>
+     </property>
+    </widget>
+    <widget class="QSlider" name="horizontalSlider">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>80</y>
+       <width>201</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>50</y>
+       <width>71</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Delay</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="gridLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>9</x>
+       <y>120</y>
+       <width>221</width>
+       <height>101</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="4" column="2">
+       <widget class="QLabel" name="label_9">
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_4">
+        <property name="text">
+         <string>Laerningrate</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>Epoch</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="label_8">
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>Epsilon</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1" colspan="2">
+       <widget class="QLabel" name="label_7">
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1" colspan="2">
+       <widget class="QLabel" name="label_5">
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1" colspan="2">
+       <widget class="QLabel" name="label_6">
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1" colspan="2">
+       <widget class="QLabel" name="label_10">
+        <property name="text">
+         <string>Score</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">

@@ -86,10 +86,10 @@ void Agent::draw(QSFMLCanvas* window)
 
 	sf::Vector2f tableOrigin;
 	if (_id == 0) {
-		tableOrigin = sf::Vector2f(55.f, 460.f);
+        tableOrigin = sf::Vector2f(25.f, 405.f);
 	}
 	else {
-		tableOrigin = sf::Vector2f(255.f, 460.f);
+        tableOrigin = sf::Vector2f(225.f, 405.f);
 	}
 
 	sf::RectangleShape tile(tileSize);
