@@ -12,32 +12,23 @@ TARGET = sfml_implement
 TEMPLATE = app
 
 SOURCES += \
-    main.cpp \
-    mainwindow.cpp \
-    mycanvas.cpp \
-    qsfmlcanvas.cpp \
-    agent.cpp \
-    app.cpp \
-    ball.cpp \
-    button.cpp \
-    qlearning.cpp \
-    slider.cpp \
-    ui.cpp \
-    uielement.cpp \
-    old_main.cpp
+    src/agent.cpp \
+    src/app.cpp \
+    src/ball.cpp \
+    src/main.cpp \
+    src/mainwindow.cpp \
+    src/mycanvas.cpp \
+    src/qlearning.cpp \
+    src/qsfmlcanvas.cpp
 
 HEADERS  += \
-    mainwindow.h \
-    mycanvas.h \
-    qsfmlcanvas.h \
-    agent.hpp \
-    app.hpp \
-    ball.hpp \
-    button.hpp \
-    qlearning.hpp \
-    slider.hpp \
-    ui.hpp \
-    uielement.hpp
+    include/agent.hpp \
+    include/app.hpp \
+    include/ball.hpp \
+    include/mainwindow.h \
+    include/mycanvas.h \
+    include/qlearning.hpp \
+    include/qsfmlcanvas.h
 
 FORMS    += \
     mainwindow.ui
