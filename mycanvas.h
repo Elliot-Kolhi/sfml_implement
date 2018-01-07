@@ -52,6 +52,8 @@ class MyCanvas : public QSFMLCanvas
   signals:
 
   public slots:
+    void is_paused();
+    void is_reset();
 };
 
 #endif

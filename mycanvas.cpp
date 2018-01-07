@@ -1,5 +1,6 @@
 #include "mycanvas.h"
 #include <unistd.h>
+#include <QMessageBox>
 
 MyCanvas::MyCanvas(MainWindow *parent, const QPoint& position, const QSize& size) :
 QSFMLCanvas(parent, position, size)
@@ -22,6 +23,16 @@ void MyCanvas::resetField()
 
     _ball.reset();
     _isPaused = false;
+}
+
+void MyCanvas::is_paused()
+{
+    QMessageBox::information(this,"title here","bloop");
+}
+
+void MyCanvas::is_reset()
+{
+
 }
 
 void MyCanvas::onInit()

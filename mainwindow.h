@@ -18,6 +18,8 @@ public:
 private slots:
     void on_pushButton_clicked();
 
+    void on_horrrrizontalSlider_sliderMoved(int position);
+
 private:
     Ui::MainWindow *ui;
 };
