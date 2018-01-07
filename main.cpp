@@ -3,6 +3,8 @@
 #include "mycanvas.cpp"
 #include <QFrame>
 #include <QApplication>
+#include <QtWidgets>
+#include <QCoreApplication>
 #include <SFML/Graphics.hpp>
 #include "ui_mainwindow.h"
 
@@ -13,21 +15,18 @@ int main(int argc, char *argv[])
     MainWindow* w = new MainWindow;
     w->show();
 
-    // Create the main frame
-    //QFrame* MainFrame = new QFrame;
-    //MainFrame->setWindowTitle("Qt SFML");
-    //MainFrame->resize(900, 700);
-    //MainFrame->show();
+    QPushButton pause_button("Pause", w);
+    pause_button.setGeometry(QRect(660, 42, 101, 23));
+    pause_button.show();
 
-    // Create a SFML view inside the main frame
-    //MyCanvas* SFMLView = new MyCanvas(MainFrame, QPoint(20, 20), QSize(620, 400));
-    //SFMLView->show();
+    QPushButton reset_button("Reset", w);
+    reset_button.setGeometry(QRect(780, 42, 101, 23));
+    reset_button.show();
 
     MyCanvas* SFMLView2 = new MyCanvas(w , QPoint(10, 20), QSize(620, 630));
     SFMLView2->show();
 
-    //MyCanvas* SFMLView3 = new MyCanvas(MainFrame, QPoint(120, 500), QSize(100, 100));
-    //SFMLView3->show();
+    connect(pause_button, SIGNAL (released()), SFMLView2, SLOT (handleButton()));
 
     return App.exec();
 }
