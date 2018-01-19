@@ -5,15 +5,19 @@
 #-------------------------------------------------
 
 QT       += core gui
+QT += widgets
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = sfml_implement
 TEMPLATE = app
 
+INCLUDEPATH += "$$PWD/include"
+INCLUDEPATH += "$$PWD/src"
+INCLUDEPATH += "$$PWD"
+
 SOURCES += \
     src/agent.cpp \
-    src/app.cpp \
     src/ball.cpp \
     src/main.cpp \
     src/mainwindow.cpp \
@@ -23,7 +27,6 @@ SOURCES += \
 
 HEADERS  += \
     include/agent.hpp \
-    include/app.hpp \
     include/ball.hpp \
     include/mainwindow.h \
     include/mycanvas.h \
