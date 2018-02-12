@@ -1,0 +1,1 @@
+../../../lib/libsfml-system.a D:/Downloads/SFML-2.0-sources/SFML-2.0/extlibs/libs-mingw/x86/libopenal32.a D:/Downloads/SFML-2.0-sources/SFML-2.0/extlibs/libs-mingw/x86/libsndfile.a -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 
