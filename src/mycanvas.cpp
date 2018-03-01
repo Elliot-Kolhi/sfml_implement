@@ -1,5 +1,6 @@
 #include "mycanvas.h"
-#include <unistd.h>
+#include <chrono>
+#include <thread>
 #include <QMessageBox>
 
 MyCanvas::MyCanvas(MainWindow *parent, const QPoint& position, const QSize& size) :
@@ -57,7 +58,7 @@ void MyCanvas::is_reset()
 
 void MyCanvas::change_delay(int val)
 {
-    _delay = val*1000;
+    _delay = val;
     //std::string str = std::to_string(_delay);
     //QString qstr = QString::fromStdString(str);
     //QMessageBox::information(this,"hi",qstr);
@@ -66,9 +67,6 @@ void MyCanvas::change_delay(int val)
 void MyCanvas::onInit()
 {
   this->setFramerateLimit(240);
-  /* put pic.png in your Build-Debug*** directory so that the program can find it*/
-  mTexture.loadFromFile("pic.png");
-  mSprite.setTexture(mTexture);
   gridSize = 20;
 
   fieldBounds = sf::Vector2f(600.f, 400.f);
@@ -102,7 +100,7 @@ void MyCanvas::onUpdate()
   sf::CircleShape shape(50);
   shape.setFillColor(sf::Color(100, 250, 50));
   shape.setPosition(v1);
-  this->draw(mSprite);
+
   draw(shape);
   sf::RectangleShape background(sf::Vector2f(_xBallMax,_yBallMax));
   background.setFillColor(sf::Color(60.f,60.f,60.f));
@@ -166,5 +164,9 @@ void MyCanvas::onUpdate()
   Epsilon = (double)(_agents[0].getEpsilon());
   emit setEpsilonText(Epsilon);
 
-  usleep(_delay);
+  using namespace std::this_thread;     // sleep_for, sleep_until
+  using namespace std::chrono_literals; // ns, us, ms, s, h, etc.
+  using std::chrono::system_clock;
+
+  sleep_for(std::chrono::milliseconds(_delay));
 }

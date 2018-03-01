@@ -15,9 +15,7 @@ class MyCanvas : public QSFMLCanvas
   void onInit();
   void onUpdate();
 
-  sf::Texture mTexture;
-  sf::Sprite mSprite;
-  sf::Image mImage;
+
   sf::Vector2f v1;
 
   sf::Vector2f fieldBounds;

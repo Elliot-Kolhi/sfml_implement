@@ -36,12 +36,10 @@ HEADERS  += \
 FORMS    += \
     mainwindow.ui
 
-INCLUDEPATH += "$$PWD/SFML-2.0-sources/SFML-2.0/include/"
-DEPENDPATH += "$$PWD/SFML-2.0-sources/SFML-2.0/include/"
+LIBS += -L$$PWD/SFML/lib
 
-LIBS += -L"$$PWD/SFML-2.0-sources/SFML_test/LIBS/"
+CONFIG(release, debug|release): LIBS += -lsfml-audio -lsfml-graphics -lsfml-main -lsfml-network -lsfml-window -lsfml-system
+CONFIG(debug, debug|release): LIBS += -lsfml-audio-d -lsfml-graphics-d -lsfml-main-d -lsfml-network-d -lsfml-window-d -lsfml-system-d
 
-CONFIG(debug, debug|release): LIBS += -lsfml-audio-d -lsfml-graphics-d -lsfml-main-d -lsfml-network-d -lsfml-system-d -lsfml-window-d
-CONFIG(release, debug|release): LIBS += -lsfml-audio -lsfml-graphics -lsfml-main -lsfml-network -lsfml-system -lsfml-window
-
-DISTFILES +=
+INCLUDEPATH += $$PWD/SFML/include
+DEPENDPATH += $$PWD/SFML/include
